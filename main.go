@@ -3,6 +3,8 @@
 // go run server.go
 // go run main.go
 
+// http://localhost:8081/world
+
 package main
 
 import (
