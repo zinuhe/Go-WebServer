@@ -1,5 +1,8 @@
 // https://tutorialedge.net/golang/creating-simple-web-server-with-golang/
 
+// go run server.go
+// go run main.go
+
 package main
 
 import (
