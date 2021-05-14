@@ -1,7 +1,7 @@
 FROM golang:1.16
 
 # Set the Current Working Directory inside the container
-WORKDIR $GOPATH/src/github.com/zinuhe/Go-WebServer
+WORKDIR $GOPATH/src/github.com/zinuhe/golang-webserver
 
 # Copy everything from the current directory to the PWD (Present Working Directory) inside the container
 COPY . .
@@ -16,4 +16,4 @@ RUN go install -v ./...
 EXPOSE 8080
 
 # Run the executable
-CMD ["Go-WebServer"]
+CMD ["golang-webserver"]
