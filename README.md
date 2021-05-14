@@ -1,2 +1,2 @@
-# Go-WebServer
-Simple Go WebServer
+# Golang WebServer
+Simple Golang WebServer
