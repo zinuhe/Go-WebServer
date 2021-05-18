@@ -3,7 +3,8 @@
 // go run server.go
 // go run main.go
 
-// http://localhost:8081/world
+// http://localhost:3080/world
+// curl http://localhost:3080/world
 
 package main
 

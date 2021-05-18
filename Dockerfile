@@ -1,19 +1,37 @@
-FROM golang:1.16
+# Dockerfile References: https://docs.docker.com/engine/reference/builder/
+
+# Start from the latest golang base image
+FROM golang:latest
+#FROM golang:1.16
+
+# Add Maintainer Info
+LABEL maintainer="Jimmy Saavedra <zinuhe@gmail.com>"
 
 # Set the Current Working Directory inside the container
-WORKDIR $GOPATH/src/github.com/zinuhe/golang-webserver
+#WORKDIR $GOPATH/src/github.com/zinuhe/golang-webserver
+WORKDIR /app
 
 # Copy everything from the current directory to the PWD (Present Working Directory) inside the container
+# Copy go mod and sum files
+# COPY go.mod go.sum ./
 COPY . .
 
-# Download all the dependencies
-RUN go get -d -v ./...
+# Download all dependencies. Dependencies will be cached if the go.mod and go.sum files are not changed
+#RUN go mod download
+#RUN go get -d -v ./...
 
 # Install the package
-RUN go install -v ./...
+#RUN go install -v ./...
 
-# This container exposes port 8080 to the outside world
-EXPOSE 8080
+# Build the Go app
+#RUN go build -o main .
+RUN go build main.go
 
-# Run the executable
-CMD ["golang-webserver"]
+
+# This container exposes port 3080 to the outside world
+EXPOSE 3080
+
+# Command to run the executable
+CMD [golang-webserver]
+#CMD ["golang-webserver"]
+# CMD ["./main"]
