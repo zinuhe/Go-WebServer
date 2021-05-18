@@ -32,6 +32,4 @@ RUN go build main.go
 EXPOSE 3080
 
 # Command to run the executable
-CMD [golang-webserver]
-#CMD ["golang-webserver"]
-# CMD ["./main"]
+CMD ["./main"]
