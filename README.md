@@ -15,9 +15,17 @@ curl http://localhost:3080/jimmy
 ```
 Hello, jimmy
 
+&nbsp;&nbsp;
+
 Docker
-$ docker build -t golang-webserver .
+```console
+docker build -t golang-webserver .
+```
 
-$ docker images
+```console
+docker images
+```
 
-$ docker run -d -p 3080:3080 golang-webserver
+```console
+docker run -d -p 3080:3080 golang-webserver
+```
