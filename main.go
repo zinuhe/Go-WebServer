@@ -8,11 +8,15 @@
 package main
 
 import (
-    "fmt"
-    "html"
-    "log"
-    "net/http"
+  "fmt"
+  "log"
+  "net/http"
+  "strconv"
+  "sync"
 )
+
+var counter int
+var mutex = &sync.Mutex{}
 
 func main() {
     http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
