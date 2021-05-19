@@ -1,6 +1,5 @@
 // https://tutorialedge.net/golang/creating-simple-web-server-with-golang/
 
-// go run server.go
 // go run main.go
 
 // http://localhost:3080/world
@@ -16,7 +15,6 @@ import (
 )
 
 func main() {
-
     http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
         fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
     })
@@ -26,5 +24,4 @@ func main() {
     })
 
     log.Fatal(http.ListenAndServe(":3080", nil))
-
 }
