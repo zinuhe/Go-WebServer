@@ -32,3 +32,5 @@ docker run -d -p 3080:3080 golang-webserver
 
 <br><br>
 resp, err := http.Get("https://httpbin.org/get")
+<br><br>
+[Medium making http request](https://medium.com/@masnun/making-http-requests-in-golang-dd123379efe7)
