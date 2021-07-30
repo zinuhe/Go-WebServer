@@ -1,7 +1,7 @@
 # Golang WebServer
 Simple Golang WebServer
 
-Webserver is running. One can interacting with it using curl
+Webserver is running. One can use curl to interact with it
 
 ```console
 curl http://localhost:3080
