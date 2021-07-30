@@ -29,3 +29,6 @@ docker images
 ```console
 docker run -d -p 3080:3080 golang-webserver
 ```
+
+
+resp, err := http.Get("https://httpbin.org/get")
